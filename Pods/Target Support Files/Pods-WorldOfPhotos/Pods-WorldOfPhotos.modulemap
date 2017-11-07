@@ -1,0 +1,6 @@
+framework module Pods_WorldOfPhotos {
+  umbrella header "Pods-WorldOfPhotos-umbrella.h"
+
+  export *
+  module * { export * }
+}
