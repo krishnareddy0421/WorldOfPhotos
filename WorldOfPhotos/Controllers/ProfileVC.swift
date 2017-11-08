@@ -17,6 +17,6 @@ class ProfileVC: UIViewController {
         super.viewDidLoad()
         self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60
         
-        usernameLbl.text = "Username Username"
+        
     }
 }
