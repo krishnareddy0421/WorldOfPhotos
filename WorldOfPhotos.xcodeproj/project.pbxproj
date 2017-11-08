@@ -18,6 +18,7 @@
 		9EB5810C1FB2ADBF007C9766 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB5810B1FB2ADBF007C9766 /* ProfileVC.swift */; };
 		9EB5810E1FB2ADCC007C9766 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB5810D1FB2ADCC007C9766 /* MenuVC.swift */; };
 		9EB581101FB2B914007C9766 /* NotesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB5810F1FB2B914007C9766 /* NotesVC.swift */; };
+		9EB581121FB2DAA5007C9766 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB581111FB2DAA5007C9766 /* CircleImageView.swift */; };
 		CE447CA7C490D6D03E0E12D1 /* Pods_WorldOfPhotos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4300E456FE28B902B310244B /* Pods_WorldOfPhotos.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		9EB5810B1FB2ADBF007C9766 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		9EB5810D1FB2ADCC007C9766 /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		9EB5810F1FB2B914007C9766 /* NotesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesVC.swift; sourceTree = "<group>"; };
+		9EB581111FB2DAA5007C9766 /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		AFA63956B408F89EB3D0F41F /* Pods-WorldOfPhotos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldOfPhotos.release.xcconfig"; path = "Pods/Target Support Files/Pods-WorldOfPhotos/Pods-WorldOfPhotos.release.xcconfig"; sourceTree = "<group>"; };
 		E5AA4D183D5B2D8C66B9162F /* Pods-WorldOfPhotos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldOfPhotos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WorldOfPhotos/Pods-WorldOfPhotos.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				9EB581011FB260C5007C9766 /* OnBoardingView.swift */,
+				9EB581111FB2DAA5007C9766 /* CircleImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EB5810C1FB2ADBF007C9766 /* ProfileVC.swift in Sources */,
+				9EB581121FB2DAA5007C9766 /* CircleImageView.swift in Sources */,
 				9EB581021FB260C5007C9766 /* OnBoardingView.swift in Sources */,
 				9EB581101FB2B914007C9766 /* NotesVC.swift in Sources */,
 				9EB5810A1FB2A238007C9766 /* HomeVC.swift in Sources */,

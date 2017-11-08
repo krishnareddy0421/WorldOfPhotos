@@ -35,6 +35,12 @@ class NotesVC: UIViewController {
             })
         }
     }
+    
+    @IBAction func backBtnPressed(_ sender: UIButton) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let homeVC = storyBoard.instantiateViewController(withIdentifier: "SWRevealVC")
+        self.present(homeVC, animated: true, completion: nil)
+    }
 }
 
 extension NotesVC: UITextViewDelegate {
