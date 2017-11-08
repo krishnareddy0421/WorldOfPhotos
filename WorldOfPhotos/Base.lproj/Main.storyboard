@@ -1,24 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Savoye.ttc">
+            <string>SavoyeLetPlain</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--On BoardingVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnBoardingVC" id="BYZ-38-t0r" customClass="OnBoardingVC" customModule="WorldOfPhotos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cPr-PO-rUg" customClass="OnBoardingView" customModule="WorldOfPhotos" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cPr-PO-rUg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-20" id="4d4-gf-pFJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cPr-PO-rUg" secondAttribute="trailing" id="AYe-zL-Abf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cPr-PO-rUg" secondAttribute="bottom" id="uMf-LQ-AJR"/>
+                            <constraint firstItem="cPr-PO-rUg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wrQ-MB-3e2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="onboardingView" destination="cPr-PO-rUg" id="9kI-bA-Mn2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="32.833583208395808"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Rse-52-Xme">
+            <objects>
+                <viewController id="KbJ-Vf-ejF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vYa-ji-MnG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="inC-KS-Who">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="World Of photos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="uLA-dY-6Ya">
+                                        <rect key="frame" x="93.5" y="32" width="187.5" height="48"/>
+                                        <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="35"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OyY-jA-a1K">
+                                        <rect key="frame" x="15" y="38.5" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="DBQ-WH-y9Y"/>
+                                            <constraint firstAttribute="height" constant="35" id="Eai-a7-sIS"/>
+                                        </constraints>
+                                        <state key="normal" image="userIcon"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ao8-1o-LcD">
+                                        <rect key="frame" x="327" y="40" width="33" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="33" id="YgT-BI-c5q"/>
+                                            <constraint firstAttribute="height" constant="33" id="iCd-xk-rVi"/>
+                                        </constraints>
+                                        <state key="normal" image="menuIcon"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="1nb-Wv-mkK"/>
+                                    <constraint firstAttribute="bottom" secondItem="uLA-dY-6Ya" secondAttribute="bottom" id="74Y-B0-n9v"/>
+                                    <constraint firstItem="ao8-1o-LcD" firstAttribute="centerY" secondItem="uLA-dY-6Ya" secondAttribute="centerY" id="CUc-WM-lTe"/>
+                                    <constraint firstAttribute="trailing" secondItem="ao8-1o-LcD" secondAttribute="trailing" constant="15" id="HUc-uB-nNU"/>
+                                    <constraint firstItem="OyY-jA-a1K" firstAttribute="leading" secondItem="inC-KS-Who" secondAttribute="leading" constant="15" id="eHD-Sf-v9v"/>
+                                    <constraint firstItem="uLA-dY-6Ya" firstAttribute="width" secondItem="inC-KS-Who" secondAttribute="width" multiplier="0.5" id="joG-6x-AtF"/>
+                                    <constraint firstItem="uLA-dY-6Ya" firstAttribute="height" secondItem="inC-KS-Who" secondAttribute="height" multiplier="0.6" id="kRg-V0-xan"/>
+                                    <constraint firstItem="uLA-dY-6Ya" firstAttribute="centerX" secondItem="inC-KS-Who" secondAttribute="centerX" id="qbb-uo-9Ia"/>
+                                    <constraint firstItem="OyY-jA-a1K" firstAttribute="centerY" secondItem="uLA-dY-6Ya" secondAttribute="centerY" id="sb5-tU-vFv"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.7361142635345459" green="0.44845736026763916" blue="0.44809806346893311" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="inC-KS-Who" firstAttribute="leading" secondItem="x3l-hi-7Ow" secondAttribute="leading" id="3NB-EV-8dd"/>
+                            <constraint firstItem="inC-KS-Who" firstAttribute="top" secondItem="x3l-hi-7Ow" secondAttribute="top" constant="-20" id="uUl-kK-x1G"/>
+                            <constraint firstItem="x3l-hi-7Ow" firstAttribute="trailing" secondItem="inC-KS-Who" secondAttribute="trailing" id="zmb-sA-crI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="x3l-hi-7Ow"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cXS-Ef-CcQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1330.4000000000001" y="30.134932533733135"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="menuIcon" width="128" height="128"/>
+        <image name="userIcon" width="128" height="128"/>
+    </resources>
 </document>

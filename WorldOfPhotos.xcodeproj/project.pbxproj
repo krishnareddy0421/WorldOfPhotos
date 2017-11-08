@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		9E38806A1FB25F1A008F35C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3880691FB25F1A008F35C1 /* AppDelegate.swift */; };
-		9E38806C1FB25F1A008F35C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E38806B1FB25F1A008F35C1 /* ViewController.swift */; };
+		9E38806C1FB25F1A008F35C1 /* OnBoardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E38806B1FB25F1A008F35C1 /* OnBoardingVC.swift */; };
 		9E38806F1FB25F1A008F35C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E38806D1FB25F1A008F35C1 /* Main.storyboard */; };
 		9E3880711FB25F1A008F35C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E3880701FB25F1A008F35C1 /* Assets.xcassets */; };
 		9E3880741FB25F1A008F35C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E3880721FB25F1A008F35C1 /* LaunchScreen.storyboard */; };
+		9EB581021FB260C5007C9766 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB581011FB260C5007C9766 /* OnBoardingView.swift */; };
 		CE447CA7C490D6D03E0E12D1 /* Pods_WorldOfPhotos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4300E456FE28B902B310244B /* Pods_WorldOfPhotos.framework */; };
 /* End PBXBuildFile section */
 
@@ -19,11 +20,12 @@
 		4300E456FE28B902B310244B /* Pods_WorldOfPhotos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldOfPhotos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E3880661FB25F1A008F35C1 /* WorldOfPhotos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldOfPhotos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E3880691FB25F1A008F35C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9E38806B1FB25F1A008F35C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9E38806B1FB25F1A008F35C1 /* OnBoardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingVC.swift; sourceTree = "<group>"; };
 		9E38806E1FB25F1A008F35C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E3880701FB25F1A008F35C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E3880731FB25F1A008F35C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E3880751FB25F1A008F35C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EB581011FB260C5007C9766 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		AFA63956B408F89EB3D0F41F /* Pods-WorldOfPhotos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldOfPhotos.release.xcconfig"; path = "Pods/Target Support Files/Pods-WorldOfPhotos/Pods-WorldOfPhotos.release.xcconfig"; sourceTree = "<group>"; };
 		E5AA4D183D5B2D8C66B9162F /* Pods-WorldOfPhotos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldOfPhotos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WorldOfPhotos/Pods-WorldOfPhotos.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,14 +80,31 @@
 		9E3880681FB25F1A008F35C1 /* WorldOfPhotos */ = {
 			isa = PBXGroup;
 			children = (
+				9EB581001FB26049007C9766 /* View */,
+				9EB581031FB29E52007C9766 /* Controllers */,
 				9E3880691FB25F1A008F35C1 /* AppDelegate.swift */,
-				9E38806B1FB25F1A008F35C1 /* ViewController.swift */,
 				9E38806D1FB25F1A008F35C1 /* Main.storyboard */,
 				9E3880701FB25F1A008F35C1 /* Assets.xcassets */,
 				9E3880721FB25F1A008F35C1 /* LaunchScreen.storyboard */,
 				9E3880751FB25F1A008F35C1 /* Info.plist */,
 			);
 			path = WorldOfPhotos;
+			sourceTree = "<group>";
+		};
+		9EB581001FB26049007C9766 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9EB581011FB260C5007C9766 /* OnBoardingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9EB581031FB29E52007C9766 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9E38806B1FB25F1A008F35C1 /* OnBoardingVC.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,7 +236,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E38806C1FB25F1A008F35C1 /* ViewController.swift in Sources */,
+				9EB581021FB260C5007C9766 /* OnBoardingView.swift in Sources */,
+				9E38806C1FB25F1A008F35C1 /* OnBoardingVC.swift in Sources */,
 				9E38806A1FB25F1A008F35C1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
