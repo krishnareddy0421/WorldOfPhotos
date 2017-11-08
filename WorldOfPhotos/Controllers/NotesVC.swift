@@ -10,26 +10,35 @@ import UIKit
 
 class NotesVC: UIViewController {
 
+    // MARK: - Outlets
+    @IBOutlet weak var notesTxtView: UITextView!
+    @IBOutlet weak var notesLbl: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func editAndSaveBtnPressed(_ sender: UIButton) {
+        if sender.imageView?.image == UIImage(named: "editImg") {
+            UIView.animate(withDuration: 0.4, animations: {
+                sender.setImage(UIImage(named: "saveImg"), for: .normal)
+                self.notesLbl.alpha = 0
+                self.notesTxtView.alpha = 1
+            })
+        } else {
+            UIView.animate(withDuration: 0.4, animations: {
+                sender.setImage(UIImage(named: "editImg"), for: .normal)
+                self.notesTxtView.alpha = 0
+                self.notesLbl.alpha = 1
+                self.notesLbl.text = self.notesTxtView.text
+            })
+        }
     }
-    
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+extension NotesVC: UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        self.notesTxtView.text = nil
     }
-    */
-
 }

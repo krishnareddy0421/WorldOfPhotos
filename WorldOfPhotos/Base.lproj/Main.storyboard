@@ -160,7 +160,7 @@
                                             <constraint firstAttribute="height" constant="30" id="OAP-gj-Qmi"/>
                                             <constraint firstAttribute="width" constant="30" id="j8K-4e-NLG"/>
                                         </constraints>
-                                        <state key="normal" image="gridView"/>
+                                        <state key="normal" image="worldView"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dP4-HW-L07">
                                         <rect key="frame" x="162.5" y="-2.5" width="50" height="50"/>
@@ -248,7 +248,10 @@
                                             <constraint firstAttribute="width" constant="30" id="5Q6-ua-qPb"/>
                                             <constraint firstAttribute="height" constant="30" id="cyf-QH-OU7"/>
                                         </constraints>
-                                        <state key="normal" image="saveImg"/>
+                                        <state key="normal" image="editImg"/>
+                                        <connections>
+                                            <action selector="editAndSaveBtnPressed:" destination="1iG-Wy-KFo" eventType="touchUpInside" id="YOj-Ii-Shr"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.7361142635345459" green="0.44845736026763916" blue="0.44809806346893311" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -264,25 +267,39 @@
                                     <constraint firstAttribute="trailing" secondItem="S6f-Sg-ef7" secondAttribute="trailing" constant="15" id="usf-Gr-2w9"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wGr-BO-YN8">
-                                <rect key="frame" x="25" y="100" width="325" height="567"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="25"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="ELJ-hZ-5BX">
+                                <rect key="frame" x="15.5" y="100" width="345" height="36"/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                <color key="textColor" red="0.58722597359999995" green="0.35781854390000001" blue="0.35820901389999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" text="start typing..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Jv2-up-8Wx">
+                                <rect key="frame" x="15" y="100" width="345" height="567"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.58722597359999995" green="0.35781854390000001" blue="0.35820901389999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="wGr-BO-YN8" firstAttribute="top" secondItem="D86-qA-81A" secondAttribute="bottom" constant="20" id="DWV-y6-TLR"/>
+                            <constraint firstItem="zHe-d1-XSg" firstAttribute="bottom" secondItem="Jv2-up-8Wx" secondAttribute="bottom" id="BI6-4h-pYQ"/>
                             <constraint firstItem="D86-qA-81A" firstAttribute="trailing" secondItem="zHe-d1-XSg" secondAttribute="trailing" id="Enn-h1-GqF"/>
-                            <constraint firstItem="zHe-d1-XSg" firstAttribute="bottom" secondItem="wGr-BO-YN8" secondAttribute="bottom" id="TJa-em-PF4"/>
-                            <constraint firstItem="wGr-BO-YN8" firstAttribute="leading" secondItem="zHe-d1-XSg" secondAttribute="leading" constant="25" id="aeQ-qy-syF"/>
-                            <constraint firstItem="zHe-d1-XSg" firstAttribute="trailing" secondItem="wGr-BO-YN8" secondAttribute="trailing" constant="25" id="cue-b8-IRd"/>
+                            <constraint firstItem="ELJ-hZ-5BX" firstAttribute="top" secondItem="D86-qA-81A" secondAttribute="bottom" constant="20" id="FhT-VA-cq5"/>
+                            <constraint firstItem="Jv2-up-8Wx" firstAttribute="leading" secondItem="zHe-d1-XSg" secondAttribute="leading" constant="15" id="bsn-BF-LuF"/>
+                            <constraint firstItem="zHe-d1-XSg" firstAttribute="trailing" secondItem="Jv2-up-8Wx" secondAttribute="trailing" constant="15" id="bvC-vg-7w9"/>
+                            <constraint firstItem="Jv2-up-8Wx" firstAttribute="top" secondItem="D86-qA-81A" secondAttribute="bottom" constant="20" id="cdN-uT-RrX"/>
+                            <constraint firstItem="ELJ-hZ-5BX" firstAttribute="width" secondItem="Jv2-up-8Wx" secondAttribute="width" id="fiF-6r-wg5"/>
+                            <constraint firstItem="ELJ-hZ-5BX" firstAttribute="centerX" secondItem="34V-OP-jcy" secondAttribute="centerX" id="pv1-So-4eZ"/>
                             <constraint firstItem="D86-qA-81A" firstAttribute="top" secondItem="zHe-d1-XSg" secondAttribute="top" constant="-20" id="vFs-C5-qKl"/>
                             <constraint firstItem="D86-qA-81A" firstAttribute="leading" secondItem="zHe-d1-XSg" secondAttribute="leading" id="xq9-he-vtq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zHe-d1-XSg"/>
                     </view>
+                    <connections>
+                        <outlet property="notesLbl" destination="ELJ-hZ-5BX" id="SBa-i9-H9T"/>
+                        <outlet property="notesTxtView" destination="Jv2-up-8Wx" id="mKh-nl-91m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XCf-uZ-fLc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -307,11 +324,11 @@
     <resources>
         <image name="backBtn" width="128" height="128"/>
         <image name="cameraImg" width="256" height="256"/>
-        <image name="gridView" width="128" height="128"/>
+        <image name="editImg" width="128" height="128"/>
         <image name="menuIcon" width="128" height="128"/>
         <image name="notesImg" width="128" height="128"/>
-        <image name="saveImg" width="128" height="128"/>
         <image name="userIcon" width="128" height="128"/>
+        <image name="worldView" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="wih-RZ-PhL"/>
