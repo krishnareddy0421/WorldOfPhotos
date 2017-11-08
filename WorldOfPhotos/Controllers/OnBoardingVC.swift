@@ -11,12 +11,19 @@ import paper_onboarding
 
 class OnBoardingVC: UIViewController {
 
+    // MARK: - Outlets
     @IBOutlet weak var onboardingView: OnBoardingView!
+    @IBOutlet weak var getStartedBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         onboardingView.dataSource = self
         onboardingView.delegate = self
+    }
+    
+    @IBAction func getStartedBtnPressed(_ sender: UIButton) {
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(true, forKey: "onBoardingCompleted")
     }
 }
 
@@ -37,16 +44,24 @@ extension OnBoardingVC: PaperOnboardingDataSource {
 
 extension OnBoardingVC: PaperOnboardingDelegate {
     func onboardingWillTransitonToIndex(_ index: Int) {
-        
+        if index == 1 {
+            if self.getStartedBtn.alpha == 1 {
+                UIView.animate(withDuration: 0.2, animations: {
+                    self.getStartedBtn.alpha = 0
+                })
+            }
+        }
     }
     
     func onboardingDidTransitonToIndex(_ index: Int) {
-        
+        if index == 2 {
+            UIView.animate(withDuration: 0.4, animations: {
+                self.getStartedBtn.alpha = 1
+            })
+        }
     }
     
     func onboardingConfigurationItem(_ item: OnboardingContentViewItem, index: Int) {
         
     }
-    
-    
 }

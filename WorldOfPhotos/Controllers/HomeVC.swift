@@ -14,7 +14,6 @@ class HomeVC: UIViewController {
     @IBOutlet weak var profileBtn: UIButton!
     @IBOutlet weak var menuBtn: UIButton!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpSideMenus()
@@ -23,9 +22,7 @@ class HomeVC: UIViewController {
     func setUpSideMenus() {
         if revealViewController() != nil {
             profileBtn.addTarget(revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
-            revealViewController().rearViewRevealWidth = 200
-            revealViewController().rightViewRevealWidth = 200
-            
+        
             menuBtn.addTarget(revealViewController(), action: #selector(SWRevealViewController.rightRevealToggle(_:)), for: .touchUpInside)
             
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
