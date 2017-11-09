@@ -19,6 +19,11 @@
 		9EB5810E1FB2ADCC007C9766 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB5810D1FB2ADCC007C9766 /* MenuVC.swift */; };
 		9EB581101FB2B914007C9766 /* NotesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB5810F1FB2B914007C9766 /* NotesVC.swift */; };
 		9EB581121FB2DAA5007C9766 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB581111FB2DAA5007C9766 /* CircleImageView.swift */; };
+		9EB581141FB37D42007C9766 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB581131FB37D41007C9766 /* CameraVC.swift */; };
+		9EB581171FB38AE4007C9766 /* StoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB581161FB38AE4007C9766 /* StoreData.swift */; };
+		9EB581191FB3AD28007C9766 /* ProfileBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB581181FB3AD28007C9766 /* ProfileBoardingView.swift */; };
+		9EB5811B1FB4C122007C9766 /* Login-SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB5811A1FB4C122007C9766 /* Login-SignUpVC.swift */; };
+		9EB5811E1FB4C20E007C9766 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB5811D1FB4C20E007C9766 /* K.swift */; };
 		CE447CA7C490D6D03E0E12D1 /* Pods_WorldOfPhotos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4300E456FE28B902B310244B /* Pods_WorldOfPhotos.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +45,11 @@
 		9EB5810D1FB2ADCC007C9766 /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		9EB5810F1FB2B914007C9766 /* NotesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesVC.swift; sourceTree = "<group>"; };
 		9EB581111FB2DAA5007C9766 /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
+		9EB581131FB37D41007C9766 /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
+		9EB581161FB38AE4007C9766 /* StoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreData.swift; sourceTree = "<group>"; };
+		9EB581181FB3AD28007C9766 /* ProfileBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBoardingView.swift; sourceTree = "<group>"; };
+		9EB5811A1FB4C122007C9766 /* Login-SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login-SignUpVC.swift"; sourceTree = "<group>"; };
+		9EB5811D1FB4C20E007C9766 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		AFA63956B408F89EB3D0F41F /* Pods-WorldOfPhotos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldOfPhotos.release.xcconfig"; path = "Pods/Target Support Files/Pods-WorldOfPhotos/Pods-WorldOfPhotos.release.xcconfig"; sourceTree = "<group>"; };
 		E5AA4D183D5B2D8C66B9162F /* Pods-WorldOfPhotos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldOfPhotos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WorldOfPhotos/Pods-WorldOfPhotos.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,7 +104,9 @@
 		9E3880681FB25F1A008F35C1 /* WorldOfPhotos */ = {
 			isa = PBXGroup;
 			children = (
+				9EB5811C1FB4C1FD007C9766 /* Constants */,
 				9EB581041FB2A0D9007C9766 /* SWRevealVC */,
+				9EB581151FB38AC2007C9766 /* Model */,
 				9EB581001FB26049007C9766 /* View */,
 				9EB581031FB29E52007C9766 /* Controllers */,
 				9E3880691FB25F1A008F35C1 /* AppDelegate.swift */,
@@ -111,6 +123,7 @@
 			children = (
 				9EB581011FB260C5007C9766 /* OnBoardingView.swift */,
 				9EB581111FB2DAA5007C9766 /* CircleImageView.swift */,
+				9EB581181FB3AD28007C9766 /* ProfileBoardingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -123,6 +136,8 @@
 				9EB5810B1FB2ADBF007C9766 /* ProfileVC.swift */,
 				9EB5810D1FB2ADCC007C9766 /* MenuVC.swift */,
 				9EB5810F1FB2B914007C9766 /* NotesVC.swift */,
+				9EB581131FB37D41007C9766 /* CameraVC.swift */,
+				9EB5811A1FB4C122007C9766 /* Login-SignUpVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -135,6 +150,22 @@
 				9EB581051FB2A0FF007C9766 /* WorldOfPhotos-Bridging-Header.h */,
 			);
 			path = SWRevealVC;
+			sourceTree = "<group>";
+		};
+		9EB581151FB38AC2007C9766 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9EB581161FB38AE4007C9766 /* StoreData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9EB5811C1FB4C1FD007C9766 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				9EB5811D1FB4C20E007C9766 /* K.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,12 +299,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EB5810C1FB2ADBF007C9766 /* ProfileVC.swift in Sources */,
+				9EB5811E1FB4C20E007C9766 /* K.swift in Sources */,
 				9EB581121FB2DAA5007C9766 /* CircleImageView.swift in Sources */,
 				9EB581021FB260C5007C9766 /* OnBoardingView.swift in Sources */,
 				9EB581101FB2B914007C9766 /* NotesVC.swift in Sources */,
+				9EB5811B1FB4C122007C9766 /* Login-SignUpVC.swift in Sources */,
+				9EB581171FB38AE4007C9766 /* StoreData.swift in Sources */,
 				9EB5810A1FB2A238007C9766 /* HomeVC.swift in Sources */,
+				9EB581191FB3AD28007C9766 /* ProfileBoardingView.swift in Sources */,
 				9EB5810E1FB2ADCC007C9766 /* MenuVC.swift in Sources */,
 				9E38806C1FB25F1A008F35C1 /* OnBoardingVC.swift in Sources */,
+				9EB581141FB37D42007C9766 /* CameraVC.swift in Sources */,
 				9E38806A1FB25F1A008F35C1 /* AppDelegate.swift in Sources */,
 				9EB581081FB2A101007C9766 /* SWRevealViewController.m in Sources */,
 			);
