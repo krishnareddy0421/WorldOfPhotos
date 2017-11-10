@@ -1,12 +1,15 @@
 PODS:
+  - IQKeyboardManagerSwift (5.0.0)
   - paper-onboarding (2.0.1)
 
 DEPENDENCIES:
+  - IQKeyboardManagerSwift (= 5.0.0)
   - paper-onboarding (~> 2.0.1)
 
 SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: 3f340202ebe1a7076279b9b9b3c817243ddb3aab
   paper-onboarding: a8e001214d9ce9decf78e160b3823f396dbd51ac
 
-PODFILE CHECKSUM: d26a1275ea9636f3facb89a01a6334d6b1b30171
+PODFILE CHECKSUM: 09f4fea956904eca7396c32431e1f950afdd6db7
 
 COCOAPODS: 1.4.0.beta.1

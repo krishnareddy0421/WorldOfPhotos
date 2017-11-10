@@ -459,6 +459,23 @@
                                     <constraint firstAttribute="bottom" secondItem="jjA-Cw-gTs" secondAttribute="bottom" id="ida-7T-aG8"/>
                                 </constraints>
                             </view>
+                            <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Neu-pX-9Ed">
+                                <rect key="frame" x="37.5" y="273.5" width="300" height="120"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KIe-dg-g8i">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="52.5"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dlt-g0-jK6">
+                                        <rect key="frame" x="0.0" y="67.5" width="300" height="52.5"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                             <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="DgY-k3-fF0">
                                 <rect key="frame" x="38" y="100" width="300" height="500"/>
                                 <subviews>
@@ -468,7 +485,7 @@
                                         <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" borderStyle="roundedRect" placeholder="Middle Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7MH-dU-Ahl">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" borderStyle="roundedRect" placeholder="Middle Name (optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7MH-dU-Ahl">
                                         <rect key="frame" x="0.0" y="73.5" width="300" height="58.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
@@ -484,25 +501,25 @@
                                         <rect key="frame" x="0.0" y="220.5" width="300" height="59"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1g6-b8-l5o">
                                         <rect key="frame" x="0.0" y="294.5" width="300" height="58.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zwq-Qf-0Ol">
                                         <rect key="frame" x="0.0" y="368" width="300" height="58.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" secureTextEntry="YES"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lf9-tE-S4l">
                                         <rect key="frame" x="0.0" y="441.5" width="300" height="58.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -527,12 +544,30 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
                                         <state key="normal" title="Login"/>
+                                        <connections>
+                                            <action selector="loginSignUpBtnPressed:" destination="JuZ-VL-d90" eventType="touchUpInside" id="M1D-1o-O2p"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9C-RT-6mc">
+                                        <rect key="frame" x="153" y="4.5" width="68" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="ftV-Ow-uXu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="19"/>
+                                        <state key="normal" title="SignUp">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="signUpBtnPressed:" destination="JuZ-VL-d90" eventType="touchUpInside" id="x9y-Ty-Z3S"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.58722597360610962" green="0.35781854391098022" blue="0.35820901393890381" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="x9C-RT-6mc" firstAttribute="centerX" secondItem="nCh-IB-Wgi" secondAttribute="centerX" id="1aV-Rm-HAP"/>
                                     <constraint firstItem="PBd-Sx-yKj" firstAttribute="centerY" secondItem="nCh-IB-Wgi" secondAttribute="centerY" id="2vI-qm-Vfz"/>
                                     <constraint firstAttribute="trailing" secondItem="PBd-Sx-yKj" secondAttribute="trailing" constant="8" id="KMo-Vl-3rK"/>
+                                    <constraint firstItem="x9C-RT-6mc" firstAttribute="centerY" secondItem="nCh-IB-Wgi" secondAttribute="centerY" id="TBj-tI-VFf"/>
                                     <constraint firstItem="lMF-Bj-OwJ" firstAttribute="leading" secondItem="nCh-IB-Wgi" secondAttribute="leading" constant="8" id="bwR-lw-wVp"/>
                                     <constraint firstItem="lMF-Bj-OwJ" firstAttribute="centerY" secondItem="nCh-IB-Wgi" secondAttribute="centerY" id="dPI-VQ-M1L"/>
                                     <constraint firstAttribute="height" constant="45" id="o4g-rA-qsS"/>
@@ -544,10 +579,14 @@
                             <constraint firstItem="Cps-vh-AR7" firstAttribute="trailing" secondItem="wlc-8J-wS9" secondAttribute="trailing" id="6Bk-BY-wgZ"/>
                             <constraint firstItem="wlc-8J-wS9" firstAttribute="leading" secondItem="Cps-vh-AR7" secondAttribute="leading" id="HvR-ii-OvT"/>
                             <constraint firstItem="nCh-IB-Wgi" firstAttribute="leading" secondItem="Cps-vh-AR7" secondAttribute="leading" id="MPO-f3-rd8"/>
+                            <constraint firstItem="Neu-pX-9Ed" firstAttribute="centerY" secondItem="JPb-mu-cb6" secondAttribute="centerY" id="Op5-vz-dWA"/>
+                            <constraint firstItem="Neu-pX-9Ed" firstAttribute="width" secondItem="JPb-mu-cb6" secondAttribute="width" multiplier="0.8" id="ShG-5l-IwO"/>
                             <constraint firstItem="wlc-8J-wS9" firstAttribute="top" secondItem="JPb-mu-cb6" secondAttribute="top" id="ZVr-dm-Tiy"/>
                             <constraint firstItem="DgY-k3-fF0" firstAttribute="centerX" secondItem="JPb-mu-cb6" secondAttribute="centerX" id="aAt-sP-q8Z"/>
+                            <constraint firstItem="Neu-pX-9Ed" firstAttribute="centerX" secondItem="JPb-mu-cb6" secondAttribute="centerX" id="aPB-99-cA6"/>
                             <constraint firstItem="DgY-k3-fF0" firstAttribute="width" secondItem="JPb-mu-cb6" secondAttribute="width" multiplier="0.8" id="c5B-nR-i4J"/>
                             <constraint firstItem="nCh-IB-Wgi" firstAttribute="trailing" secondItem="Cps-vh-AR7" secondAttribute="trailing" id="cpp-VY-Jzy"/>
+                            <constraint firstItem="Neu-pX-9Ed" firstAttribute="height" secondItem="JPb-mu-cb6" secondAttribute="height" multiplier="0.18" id="f4Y-CO-Oeb"/>
                             <constraint firstItem="nCh-IB-Wgi" firstAttribute="bottom" secondItem="Cps-vh-AR7" secondAttribute="bottom" id="gW5-ax-dzl"/>
                             <constraint firstItem="DgY-k3-fF0" firstAttribute="height" secondItem="JPb-mu-cb6" secondAttribute="height" multiplier="0.75" id="iwW-Mf-vbv"/>
                             <constraint firstItem="DgY-k3-fF0" firstAttribute="centerY" secondItem="JPb-mu-cb6" secondAttribute="centerY" multiplier="1.05" id="uO2-zP-FCr"/>
@@ -555,8 +594,19 @@
                         <viewLayoutGuide key="safeArea" id="Cps-vh-AR7"/>
                     </view>
                     <connections>
+                        <outlet property="confirmPasswordTxt" destination="Lf9-tE-S4l" id="WCu-Ma-4JH"/>
+                        <outlet property="emailTxt" destination="8B3-ZQ-ArB" id="kMk-AS-fGS"/>
+                        <outlet property="firstNameTxt" destination="oeS-F3-4dc" id="1rF-rg-9RA"/>
+                        <outlet property="lastNameTxt" destination="Mj1-Xz-XLQ" id="EYP-mC-Ttu"/>
+                        <outlet property="loginEmailTxt" destination="KIe-dg-g8i" id="sfS-Tz-tqr"/>
+                        <outlet property="loginPasswordTxt" destination="dlt-g0-jK6" id="Bkm-wy-sbv"/>
                         <outlet property="loginSignUpBtn" destination="PBd-Sx-yKj" id="ah6-i2-NXO"/>
                         <outlet property="loginSignUpTitleLbl" destination="jjA-Cw-gTs" id="Reg-0o-URF"/>
+                        <outlet property="loginStackView" destination="Neu-pX-9Ed" id="LjQ-He-T3E"/>
+                        <outlet property="middleNameTxt" destination="7MH-dU-Ahl" id="WLg-bD-JjV"/>
+                        <outlet property="passwordTxt" destination="Zwq-Qf-0Ol" id="1ax-Cw-CHe"/>
+                        <outlet property="phoneNumTxt" destination="1g6-b8-l5o" id="Ac4-FE-DKX"/>
+                        <outlet property="signUpBtn" destination="x9C-RT-6mc" id="bCk-8M-xSc"/>
                         <outlet property="signUpStackView" destination="DgY-k3-fF0" id="cej-AP-ZCW"/>
                     </connections>
                 </viewController>
