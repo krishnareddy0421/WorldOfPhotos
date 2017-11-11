@@ -6,4 +6,8 @@ target 'WorldOfPhotos' do
   pod 'paper-onboarding', '~> 2.0.1'
   pod 'IQKeyboardManagerSwift', '5.0.0'
 
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+
 end

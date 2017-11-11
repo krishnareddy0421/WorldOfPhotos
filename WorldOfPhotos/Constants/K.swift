@@ -9,6 +9,7 @@
 import Foundation
 
 // MARK: - Notifications
-let NOTIFY_LOGIN = Notification.Name("loginBtnPressed")
-let NOTIFY_SIGNUP = Notification.Name("createAcntBtnPressed")
 
+
+// MARK: - Firebase Database
+let DATABASE_URL = "https://worldofphotos-2cce1.firebaseio.com/"

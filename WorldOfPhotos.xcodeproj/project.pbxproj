@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E2FC8D71FB635AA002A37FD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9E2FC8D61FB635AA002A37FD /* GoogleService-Info.plist */; };
+		9E2FC8DA1FB6372F002A37FD /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2FC8D91FB6372F002A37FD /* Alerts.swift */; };
 		9E38806A1FB25F1A008F35C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3880691FB25F1A008F35C1 /* AppDelegate.swift */; };
 		9E38806C1FB25F1A008F35C1 /* OnBoardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E38806B1FB25F1A008F35C1 /* OnBoardingVC.swift */; };
 		9E38806F1FB25F1A008F35C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E38806D1FB25F1A008F35C1 /* Main.storyboard */; };
@@ -29,6 +31,8 @@
 
 /* Begin PBXFileReference section */
 		4300E456FE28B902B310244B /* Pods_WorldOfPhotos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldOfPhotos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E2FC8D61FB635AA002A37FD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9E2FC8D91FB6372F002A37FD /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		9E3880661FB25F1A008F35C1 /* WorldOfPhotos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldOfPhotos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E3880691FB25F1A008F35C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E38806B1FB25F1A008F35C1 /* OnBoardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingVC.swift; sourceTree = "<group>"; };
@@ -83,10 +87,27 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9E2FC8D51FB6356A002A37FD /* Google Plist */ = {
+			isa = PBXGroup;
+			children = (
+				9E2FC8D61FB635AA002A37FD /* GoogleService-Info.plist */,
+			);
+			path = "Google Plist";
+			sourceTree = "<group>";
+		};
+		9E2FC8D81FB6371C002A37FD /* Error Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				9E2FC8D91FB6372F002A37FD /* Alerts.swift */,
+			);
+			path = "Error Alerts";
+			sourceTree = "<group>";
+		};
 		9E38805D1FB25F1A008F35C1 = {
 			isa = PBXGroup;
 			children = (
 				9E3880681FB25F1A008F35C1 /* WorldOfPhotos */,
+				9E2FC8D51FB6356A002A37FD /* Google Plist */,
 				9E3880671FB25F1A008F35C1 /* Products */,
 				3B6630B72DD20042682B2CD7 /* Pods */,
 				30CED0B6E429507966C489BB /* Frameworks */,
@@ -104,6 +125,7 @@
 		9E3880681FB25F1A008F35C1 /* WorldOfPhotos */ = {
 			isa = PBXGroup;
 			children = (
+				9E2FC8D81FB6371C002A37FD /* Error Alerts */,
 				9EB5811C1FB4C1FD007C9766 /* Constants */,
 				9EB581041FB2A0D9007C9766 /* SWRevealVC */,
 				9EB581151FB38AC2007C9766 /* Model */,
@@ -232,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E3880741FB25F1A008F35C1 /* LaunchScreen.storyboard in Resources */,
+				9E2FC8D71FB635AA002A37FD /* GoogleService-Info.plist in Resources */,
 				9E3880711FB25F1A008F35C1 /* Assets.xcassets in Resources */,
 				9E38806F1FB25F1A008F35C1 /* Main.storyboard in Resources */,
 			);
@@ -262,12 +285,20 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-WorldOfPhotos/Pods-WorldOfPhotos-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 				"${BUILT_PRODUCTS_DIR}/paper-onboarding/paper_onboarding.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/paper_onboarding.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EB5810C1FB2ADBF007C9766 /* ProfileVC.swift in Sources */,
+				9E2FC8DA1FB6372F002A37FD /* Alerts.swift in Sources */,
 				9EB5811E1FB4C20E007C9766 /* K.swift in Sources */,
 				9EB581121FB2DAA5007C9766 /* CircleImageView.swift in Sources */,
 				9EB581021FB260C5007C9766 /* OnBoardingView.swift in Sources */,

@@ -82,7 +82,7 @@ class Login_SignUpVC: UIViewController {
     @IBAction func loginSignUpBtnPressed(_ sender: UIButton) {
         if sender.titleLabel?.text == "SignUp" {
             guard let fName = firstNameTxt.text, let mName = middleNameTxt.text, let lName = lastNameTxt.text, let email = emailTxt.text, let phone = phoneNumTxt.text, let pass = passwordTxt.text, let confPass = confirmPasswordTxt.text, firstNameTxt.text != "", lastNameTxt.text != "", emailTxt.text != "", phoneNumTxt.text != "", passwordTxt.text != "", confirmPasswordTxt.text != nil, passwordTxt.text == confirmPasswordTxt.text else {
-                // error handling
+                self.userInfoErrorAlert()
                 return
             }
             print("\(fName)+\(mName)+\(lName)+\(email)+\(phone)+\(pass)+\(confPass)")
