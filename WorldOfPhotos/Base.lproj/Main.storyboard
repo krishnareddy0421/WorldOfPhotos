@@ -21,6 +21,9 @@
         <array key="HelveticaNeue.ttc">
             <string>HelveticaNeue-Bold</string>
         </array>
+        <array key="PartyLET.ttf">
+            <string>PartyLetPlain</string>
+        </array>
         <array key="Savoye.ttc">
             <string>SavoyeLetPlain</string>
         </array>
@@ -155,7 +158,7 @@
                                     <segue destination="JuZ-VL-d90" kind="show" identifier="toSignUp" id="b0P-AB-z3V"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YgJ-fd-6q9" customClass="CircleImageView" customModule="WorldOfPhotos" customModuleProvider="target">
+                            <imageView alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YgJ-fd-6q9" customClass="CircleImageView" customModule="WorldOfPhotos" customModuleProvider="target">
                                 <rect key="frame" x="59.5" y="117" width="200" height="200"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -192,6 +195,12 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap on image to change !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lb3-D0-jkI">
+                                <rect key="frame" x="107" y="90" width="105" height="20"/>
+                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="muq-YT-x0k">
                                 <rect key="frame" x="29" y="337" width="260" height="230.5"/>
                                 <subviews>
@@ -232,13 +241,15 @@
                             <constraint firstItem="5u5-Tj-LL6" firstAttribute="leading" secondItem="VPQ-Gk-Xtr" secondAttribute="leading" id="0ON-FY-Lai"/>
                             <constraint firstItem="muq-YT-x0k" firstAttribute="width" secondItem="YgJ-fd-6q9" secondAttribute="width" multiplier="1.3" id="3fl-P6-q2h"/>
                             <constraint firstItem="5u5-Tj-LL6" firstAttribute="trailing" secondItem="VPQ-Gk-Xtr" secondAttribute="trailing" id="510-C1-wwY"/>
+                            <constraint firstItem="Lb3-D0-jkI" firstAttribute="top" secondItem="5u5-Tj-LL6" secondAttribute="bottom" constant="10" id="7UU-Ox-Zhc"/>
                             <constraint firstItem="YgJ-fd-6q9" firstAttribute="centerX" secondItem="8L4-Y7-CbX" secondAttribute="centerX" multiplier="0.85" id="8TQ-8E-Ay6"/>
                             <constraint firstItem="bfN-bI-LjH" firstAttribute="bottom" secondItem="VPQ-Gk-Xtr" secondAttribute="bottom" id="B51-z3-d6C"/>
                             <constraint firstItem="crv-Vm-PEQ" firstAttribute="centerY" secondItem="8L4-Y7-CbX" secondAttribute="centerY" multiplier="1.9" id="D0X-Oa-bpP"/>
-                            <constraint firstItem="4IX-uu-dPC" firstAttribute="firstBaseline" secondItem="muq-YT-x0k" secondAttribute="baseline" constant="32" symbolType="layoutAnchor" id="DFq-oI-au4"/>
+                            <constraint firstItem="4IX-uu-dPC" firstAttribute="firstBaseline" secondItem="muq-YT-x0k" secondAttribute="baseline" constant="28" symbolType="layoutAnchor" id="DFq-oI-au4"/>
                             <constraint firstItem="GiI-iA-0gk" firstAttribute="centerY" secondItem="8L4-Y7-CbX" secondAttribute="centerY" multiplier="1.75" id="FPv-HE-u2Z"/>
                             <constraint firstItem="crv-Vm-PEQ" firstAttribute="height" secondItem="8L4-Y7-CbX" secondAttribute="height" multiplier="0.07" id="IDO-VV-8Yn"/>
                             <constraint firstItem="crv-Vm-PEQ" firstAttribute="width" secondItem="8L4-Y7-CbX" secondAttribute="width" multiplier="0.6" id="JA4-Qy-vuy"/>
+                            <constraint firstItem="Lb3-D0-jkI" firstAttribute="centerX" secondItem="8L4-Y7-CbX" secondAttribute="centerX" multiplier="0.85" id="Ka1-J6-9Bt"/>
                             <constraint firstItem="GiI-iA-0gk" firstAttribute="centerX" secondItem="8L4-Y7-CbX" secondAttribute="centerX" multiplier="0.8" id="NM0-oS-k7Y"/>
                             <constraint firstItem="x4e-6x-jPu" firstAttribute="centerX" secondItem="8L4-Y7-CbX" secondAttribute="centerX" multiplier="0.8" id="VuX-Z9-DDO"/>
                             <constraint firstItem="bfN-bI-LjH" firstAttribute="top" secondItem="5u5-Tj-LL6" secondAttribute="bottom" id="WeD-5C-wB6"/>
@@ -258,14 +269,20 @@
                     </view>
                     <connections>
                         <outlet property="createAcntBtn" destination="GiI-iA-0gk" id="wnU-yp-F8g"/>
+                        <outlet property="editProfileBtn" destination="4IX-uu-dPC" id="dcO-KV-ZyT"/>
                         <outlet property="loginBtn" destination="x4e-6x-jPu" id="6d9-Gr-tKT"/>
+                        <outlet property="logoutBtn" destination="crv-Vm-PEQ" id="voQ-mD-UvP"/>
+                        <outlet property="onBoardingScrnView" destination="bfN-bI-LjH" id="IME-IE-mSh"/>
+                        <outlet property="profImage" destination="YgJ-fd-6q9" id="aqq-FP-xAr"/>
                         <outlet property="profileOnboardingView" destination="bfN-bI-LjH" id="cXy-mG-wHe"/>
+                        <outlet property="tapImageForChngLbl" destination="Lb3-D0-jkI" id="TlD-6h-UnJ"/>
+                        <outlet property="userInfoStackView" destination="muq-YT-x0k" id="ltX-wr-IP3"/>
                         <outlet property="usernameLbl" destination="z7v-EA-jr6" id="QsY-7b-7df"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xy5-Ai-KKb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="479" y="33"/>
+            <point key="canvasLocation" x="477.60000000000002" y="32.833583208395808"/>
         </scene>
         <!--HomeVC-->
         <scene sceneID="Rse-52-Xme">

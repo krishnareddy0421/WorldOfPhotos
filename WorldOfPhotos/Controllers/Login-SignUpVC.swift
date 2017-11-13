@@ -86,7 +86,8 @@ class Login_SignUpVC: UIViewController {
                 return
             }
             print("\(fName)+\(mName)+\(lName)+\(email)+\(phone)+\(pass)+\(confPass)")
-            
+            self.dismiss(animated: true, completion: nil)
+            NotificationCenter.default.post(name: NSNotification.Name("signUpComplete"), object: nil)
         } else {
             print("Print signup")
         }
