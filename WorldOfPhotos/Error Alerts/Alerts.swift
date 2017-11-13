@@ -8,11 +8,17 @@
 
 import UIKit
 
-
 extension UIViewController {
     func userInfoErrorAlert() {
         let alert = UIAlertController.init(title: "Information Provided is Incorrect", message: "May be passwords does not match", preferredStyle: .alert)
         alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
+    
+    func loginErrorAlert() {
+        let alert = UIAlertController.init(title: "Login Failed !!!", message: "May be passwords does not match", preferredStyle: .alert)
+        alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+
 }
